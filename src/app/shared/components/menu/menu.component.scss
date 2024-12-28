@@ -1,0 +1,10 @@
+.nav-container-logo {
+  width: 40px;
+  height: 40px;
+  background-size: 40px;
+  background-image: url('../../../../assets/logo/llamatracker-480.png');
+}
+
+.active {
+  @apply md:text-blue-700
+}

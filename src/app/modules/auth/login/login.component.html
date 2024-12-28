@@ -1,0 +1,114 @@
+<div class="login">
+  <div class="new-login">
+    <div class="background">
+      <ng-container *ngFor="let image of images; index as i">
+        <div
+          class="image"
+          [style.animationDelay]="i*10 + 's'"
+          [style.backgroundImage]="'url(' + image.image + ')'"
+        ></div>
+      </ng-container>
+    </div>
+    <div class="card flex justify-center">
+    </div>
+
+    <form>
+<!--      [class.error]="error"-->
+      <h3>{{ 'auth.login.signIn' | translate }}</h3>
+<!--      <p *ngIf="error" class="error">{{ errorData }}</p>-->
+      <!--        <p *ngIf="error" class="error">{{ error | translate: errorParams }}</p>-->
+
+      <div class="login-form">
+        <div class="login-form-input">
+          <p-floatlabel>
+            <label for="username">Username</label>
+            <input id="username" pInputText />
+          </p-floatlabel>
+
+<!--          <app-input label="auth.login.username"-->
+<!--                     placeholder="Username or Email"-->
+<!--                     name="username"-->
+<!--                     autofocus-->
+<!--                     type="text"-->
+<!--                     [(ngModel)]="login.username"-->
+<!--                     [ngClass]="{ 'ng-invalid': error }"-->
+<!--          ></app-input>-->
+        </div>
+        <div class="login-form-input">
+          <p-floatlabel>
+            <label for="password">Password</label>
+            <input id="password" pInputText />
+          </p-floatlabel>
+<!--          <app-input label="auth.login.password"-->
+<!--                     placeholder="Password"-->
+<!--                     name="password"-->
+<!--                     autofocus-->
+<!--                     type="password"-->
+<!--                     [(ngModel)]="login.password"-->
+<!--                     class="login-form-input"-->
+<!--          ></app-input>-->
+
+        </div>
+
+        <div class="login-form-input login-form-actions">
+<!--          <mat-checkbox-->
+<!--            [(ngModel)]="login.remember"-->
+<!--            name="remember"-->
+<!--            labelPosition="after">-->
+<!--            {{ 'auth.login.rememberMe' | translate }}-->
+<!--          </mat-checkbox>-->
+
+            <div>
+              <p-checkbox formControlName="city" value="New York" inputId="ny"/>
+              <label for="ny" class="ml-2">Remember me</label>
+            </div>
+          <div>
+            s
+            <a *ngIf="true" [routerLink]="['/forgot-password']">{{ 'auth.login.forgotPassword' | translate }}</a>
+          </div>
+        </div>
+
+        <div class="login-form-input login-form-button">
+          <p-button label="Login"/>
+
+<!--          <app-button-->
+<!--            (onClick)="onLogin()"-->
+<!--            buttonStyle="primary"-->
+<!--            type="submit"-->
+<!--            label="auth.login.enter"-->
+<!--            [isSubmitting]="isSubmitting"-->
+<!--          ></app-button>-->
+        </div>
+
+      </div>
+
+      <div class="login-form-or-social">
+        <div class="login-form-or-social-line"></div>
+        <div class="login-form-or-social-text">{{ 'auth.login.or' | translate }}</div>
+        <div class="login-form-or-social-line"></div>
+      </div>
+
+      <div>
+        <p-button label="Register"/>
+      </div>
+
+<!--      <div class="login-form-social social ">-->
+<!--        <div class="login-form-social-button go"-->
+<!--        >-->
+<!--&lt;!&ndash;          (click)="loginWithGoogle()"&ndash;&gt;-->
+<!--&lt;!&ndash;          <img src="{{icons.google}}" alt="Google Login">&ndash;&gt;-->
+<!--          <span>-->
+<!--              {{ 'auth.login.google' | translate }}-->
+<!--            </span>-->
+<!--        </div>-->
+<!--        <div class="login-form-social-button fb" >-->
+<!--&lt;!&ndash;          (click)="loginWithFacebook()"&ndash;&gt;-->
+<!--&lt;!&ndash;          <img src="{{icons.facebook}}" alt="Facebook Login">&ndash;&gt;-->
+<!--          <span>-->
+<!--              {{ 'auth.login.facebook' | translate }}-->
+<!--            </span>-->
+<!--        </div>-->
+<!--      </div>-->
+    </form>
+  </div>
+</div>

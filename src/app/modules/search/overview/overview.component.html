@@ -1,0 +1,57 @@
+<div class="flex flex-col gap-5">
+  <div class="flex justify-center">
+    <div class="w-30">
+      Llamatracker Img
+    </div>
+  </div>
+  <div class="flex flex-col gap-5 items-center">
+    <div class="w-30 flex flex-row gap-5">
+      <div>
+        <p-floatlabel>
+          <input pInputText id="over_label" autocomplete="off" />
+<!--          [(ngModel)]="value1"-->
+          <label for="over_label">Over Label</label>
+        </p-floatlabel>
+      </div>
+      <div>
+        <p-select [options]="[
+        {name: 'xbox', value: '1'},
+        {name: 'ps', value: '2'},
+        {name: 'epic', value: '3'},
+        ]" optionLabel="name" placeholder="Select a City" class="w-full md:w-56" />
+<!--        [(ngModel)]="selectedCity"-->
+      </div>
+    </div>
+    <div>
+      <div>
+        <p-button label="Search" icon="pi pi-check" />
+<!--        [loading]="loading" (onClick)="load()"-->
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-row gap-5 justify-center">
+    <div class="w-40 bg-red-200">recent 1</div>
+    <div class="w-40 bg-red-200">recent 2</div>
+    <div class="w-40 bg-red-200">recent 3</div>
+    <div class="w-40 bg-red-200">recent 4</div>
+    <div class="w-40 bg-red-200">recent 5</div>
+  </div>
+  <div>
+    <div>
+      <div>
+        aqui mejores 10 jugaodores categoria 1
+      </div>
+      <div>
+        aqui mejores 10 jugaodores categoria 1
+      </div>
+    </div>
+    <div>
+      <div>
+        aqui mejores 10 jugaodores categoria 1
+      </div>
+      <div>
+        aqui mejores 10 jugaodores categoria 1
+      </div>
+    </div>
+  </div>
+</div>
